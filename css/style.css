@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'acmeregular';
+    src: url('../font/acme-regular.woff2') format('woff2'),
+         url('../font/acme-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #E6E6FA;
+    font-family: 'acmeregular', sans-serif;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+/*
+██   ██ ███████  █████  ██████  ███████ ██████  
+██   ██ ██      ██   ██ ██   ██ ██      ██   ██ 
+███████ █████   ███████ ██   ██ █████   ██████  
+██   ██ ██      ██   ██ ██   ██ ██      ██   ██ 
+██   ██ ███████ ██   ██ ██████  ███████ ██   ██ 
+*/
+header {
+    background-color:#D2CAEC;
+    width: 100%;
+    height: 45vh;
+    margin: 2vh 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+div.logo {
+    width: 100%;
+    margin-top: .5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.logo img {
+    width: 20%;
+    height: 90%;
+    margin: 0 2em;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 1em;
+}
+
+
+/*
+███    ███  █████  ██ ███    ██ 
+████  ████ ██   ██ ██ ████   ██ 
+██ ████ ██ ███████ ██ ██ ██  ██ 
+██  ██  ██ ██   ██ ██ ██  ██ ██ 
+██      ██ ██   ██ ██ ██   ████                                                               
+*/
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* scrolling menu */
+nav {
+    background-color: #D2CAEC;
+    width: 100%;
+    height: 45vh;
+    margin-bottom: 6vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav li {
+    list-style: none;
+    width: 235px; /* image width */
+    height: 235px; /* image height */
+    border-radius: 50%;
+    margin: 1em 0;
+    box-shadow: 0 0 0 0 #000;
+    animation: pulse 1.3s infinite;
+}
+
+@keyframes pulse {
+    to {
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, .01);
+    }
+}
+
+
+/* css for all sections */
+section {
+    height: 100vh;
+    margin-bottom: 7vh;
+}
+
+h2 {
+    color: #DDA0DD;
+    position: absolute;
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+div.overlay {
+    background-color: rgba(0, 0, 0, .56);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.scrollers {
+    position: absolute;
+    right: 2vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.scrolling a {
+    color: #DBDBDB;
+    text-decoration: none;
+}
+
+/* Climate plan section */
+section#climate_plan {
+    background-image: url(../img/section_climate_plan/environment.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#climate_plan .scrollers {
+    bottom: -98vh;
+}
+
+article.left_side {
+    color: #DBDBDB;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+/* Actions and actors section */
+section#actions_and_actors {
+    background-image: url(../img/section_actions_and_actors/tri.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#actions_and_actors .overlay {
+    background-color: rgba(0, 0, 0, .70);
+}
+
+#actions_and_actors .scrollers {
+    bottom: -205vh;
+}
+
+#actions_and_actors article {
+    color: #DBDBDB;
+}
+
+article.public {
+    width: 50%;
+    margin-left: 2em;
+    margin-right: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+article.private {
+    width: 50%;
+    margin-left: 1em;
+    margin-right: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h3 {
+    color: #9933cc;
+}
+
+
+/* Recommandations section */
+section#recommendations {
+    background-image: url(../img/section_recommendations/vegetable_garden.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#recommendations .scrollers {
+    bottom: -312vh;
+}
+
+#recommendations p {
+    color: #DBDBDB;
+    width: 50%;
+    margin-left: 2em;
+    margin-right: 1em;
+}
+
+#recommendations img {
+    width: 50%;
+    height: 70%;
+    margin-right: 2em;
+    margin-left: 1em;
+}
+
+/*
+███████  ██████   ██████  ████████ ███████ ██████  
+██      ██    ██ ██    ██    ██    ██      ██   ██ 
+█████   ██    ██ ██    ██    ██    █████   ██████  
+██      ██    ██ ██    ██    ██    ██      ██   ██ 
+██       ██████   ██████     ██    ███████ ██   ██ 
+*/
+footer {
+    background-color: #D2CAEC;
+    text-align: center;
+}
